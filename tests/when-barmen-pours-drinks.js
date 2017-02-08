@@ -36,8 +36,10 @@ suite('When barmen pours drinks', function () {
             let smsService = new SmsService();
             let smsServiceMock = sinon.mock(smsService);
             barmen = new Barmen(emptyCupboard, smsService);
-            smsServiceMock.expects("send").once();
-  
+            smsServiceMock.expects("send")
+                .once()
+                .withArgs("Hello. We have run out of vodka. Please buy several bottles.");
+
             barmen.pour("vodka", 100, visitor);
 
             smsServiceMock.verify();
