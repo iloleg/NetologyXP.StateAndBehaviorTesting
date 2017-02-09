@@ -1,0 +1,30 @@
+{
+  "name": "netology-xp-unit-testing-state-behavior",
+  "version": "1.0.0",
+  "description": "XP. Unit testing. Value, state, behavior testing.",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha --ui tdd -R spec tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmartStepGroupTrainings/NetologyXP.StateAndBehaviorTesting.git"
+  },
+  "keywords": [
+    "XP",
+    "unit-testing",
+    "value-testing",
+    "state-testing",
+    "interaction-testing",
+    "mock",
+    "smart-unit-tests",
+    "js"
+  ],
+  "author": "SmartStepGroup",
+  "devDependencies": {
+    "mocha": "~2.4.5",
+    "chai": "~3.5.0",
+    "chai-http": "~2.0.1",
+    "chai-string": "~1.2.0",
+    "sinon": "latest"
+  }
+}

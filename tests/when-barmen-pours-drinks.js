@@ -32,6 +32,10 @@ suite('When barmen pours drinks', function () {
             assert.equal(smsService.lastSentSms, "Hello. We have run out of vodka. Please buy several bottles.");
         });
 
+
+
+
+
         test('sms service is called if no drink is available', function () {
             let smsService = new SmsService();
             let smsServiceMock = sinon.mock(smsService);
@@ -45,6 +49,11 @@ suite('When barmen pours drinks', function () {
             smsServiceMock.verify();
             smsServiceMock.restore();
         });
+
+
+
+
+
 
         test('barmen sends sms to buy drink to boss', function () {
             let smsService = new SmsServiceFake();
