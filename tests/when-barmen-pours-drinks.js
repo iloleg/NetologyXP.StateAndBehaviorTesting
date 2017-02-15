@@ -53,8 +53,6 @@ suite('When barmen pours drinks', function () {
 
 
 
-
-
         test('barmen sends sms to buy drink to boss', function () {
             let smsService = new SmsServiceFake();
             barmen = new Barmen(emptyCupboard, smsService);
@@ -77,6 +75,9 @@ suite('When barmen pours drinks', function () {
             smsServiceMock.verify();
             smsServiceMock.restore();
         })
+
+
+
 
 
     });
