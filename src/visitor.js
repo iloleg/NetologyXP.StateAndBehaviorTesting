@@ -19,6 +19,9 @@ class Visitor {
     getTotallyDrunk() {
         return this.totalDrinkVolume;
     }
+    pay(cost, barmen) {
+        barmen.logLastDrinkPayment(cost);
+    }
 }
 
 module.exports = Visitor;
