@@ -64,6 +64,21 @@ suite('When barmen pours drinks', function () {
             assert.equal(true, barmen.wasSmsSent);
         });
 
+        test('barmen sends sms to buy Wine', function () {
+            let smsService = new SmsService();
+            let smsServiceMock = sinon.mock(smsService);
+            barmen = new Barmen(emptyCupboard, smsService);
+            smsServiceMock.expects("send")
+                .once()
+                .withArgs("Wine ran out must be ordered.");
+
+            barmen.pour("Wine", 100, visitor);
+
+            smsServiceMock.verify();
+            smsServiceMock.restore();
+        })
+
+
     });
 
 });
