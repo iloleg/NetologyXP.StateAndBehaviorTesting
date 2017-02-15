@@ -1,8 +1,8 @@
-class SalesAccount {
+class salesAccount {
 
-    addEntry(drink, volume, cost) {
+    AddPayment(drink, volume, cost) {
 
     }
 }
 
-module.exports = SalesAccount;
+module.exports = salesAccount;
